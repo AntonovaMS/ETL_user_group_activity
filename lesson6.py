@@ -59,8 +59,8 @@ with DAG(
         task_id= 'stg_to_s_auth_history',
         sql="stg_to_s_auth_history.sql", vertica_conn_id= vertica_conn,
         task_concurrency=1, dag=dag)
-#добавить очистку таблицы stg_group_log как отдельный шаг в даге после загрузок во все таблицы?
-# или же достаточно добавить в файл "stg_to_s_auth_history.sql" в конец строку с очисткой? 
+
+    
 (
     sprint6_dag_get_data >>
 
